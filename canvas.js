@@ -79,7 +79,7 @@ canvasjr.fillStyle = gerar_cor_hexadecimal();
 canvasjr.save( ); // stores canvas state - importantly it saves the direction of y-axis increasing
 
 /* mark the origin for reference */
-canvasjr.fillStyle = 'red';
+canvasjr.fillStyle = 'white';
 canvasjr.fillRect( -2 , -2 , 4 , 4 );
 
 /* marks a simple axis */
@@ -96,7 +96,7 @@ canvasjr.scale( 1, -1 ); // makes y-axis increasing downwards so text can be wri
 canvasjr.font = '15px Arial';
 var authorName = '@Felipe Adryan 😼';
 var authorNameMeasured = canvasjr.measureText( authorName );
-canvasjr.fillStyle = gerar_cor_hexadecimal(); // design by day green
+canvasjr.fillStyle = gerar_cor_hexadecimal(); // design by day white
 canvasjr.textBaseline = 'bottom'; // allows to be manpulated from bottom-left
 canvasjr.fillText( authorName, ( authorNameMeasured.width * -0.5 ), ( canvas.height * 0.5 - 25 ) ); // positions author attribute
 canvasjr.restore( ); // makes y-axis increasing upwards again
@@ -105,13 +105,13 @@ canvasjr.restore( ); // makes y-axis increasing upwards again
 var pencil = {
   'thickness': 1, // thickness of line
   'color': {
-    'black': '#000000',
-    'blue': 'blue',
-    'pink': 'pink',
-    'orange': 'orange',
-    'green': '#58f721',
-    'red': '#fb4b4b',
-    'purple': '#c07eff'
+    'white': 'white',
+    'white': 'white',
+    'white': 'white',
+    'white': 'white',
+    'white': 'white',
+    'white': 'white',
+    'white': 'white'
   }
 };
 
@@ -159,7 +159,7 @@ var curve_1 = {
   },
   'lowerLimit': -1 * ( ( 3 * Math.sqrt( 33 ) ) / 7 ) * a,
   'upperLimit': 0,
-  'pencilColor': pencil.color.blue
+  'pencilColor': pencil.color.white
 };
 
 var curve_2 = {
@@ -169,7 +169,7 @@ var curve_2 = {
   },
   'lowerLimit': -1 * ( ( 3 * Math.sqrt( 33 ) ) / 7 ) * a,
   'upperLimit': 0,
-  'pencilColor': pencil.color.blue
+  'pencilColor': pencil.color.white
 };
 
 var curve_3 = {
@@ -179,7 +179,7 @@ var curve_3 = {
   },
   'lowerLimit': -4 * a,
   'upperLimit': 4 * a,
-  'pencilColor': pencil.color.black
+  'pencilColor': pencil.color.white
 };
 
 var curve_4 = {
@@ -189,7 +189,7 @@ var curve_4 = {
   },
   'lowerLimit': 0,
   'upperLimit': ( ( 6 * Math.sqrt( 10 ) ) / 7 ) * a,
-  'pencilColor': pencil.color.pink
+  'pencilColor': pencil.color.white
 };
 
 var curve_5 = {
@@ -199,7 +199,7 @@ var curve_5 = {
   },
   'lowerLimit': 0,
   'upperLimit': ( ( 6 * Math.sqrt( 10 ) ) / 7 ) * a,
-  'pencilColor': pencil.color.pink
+  'pencilColor': pencil.color.white
 };
 
 var curve_6 = {
@@ -209,7 +209,7 @@ var curve_6 = {
   },
   'lowerLimit': 0.75 * a,
   'upperLimit': a,
-  'pencilColor': pencil.color.green
+  'pencilColor': pencil.color.white
 };
 
 var curve_7 = {
@@ -219,7 +219,7 @@ var curve_7 = {
   },
   'lowerLimit': -a,
   'upperLimit': -0.75 * a,
-  'pencilColor': pencil.color.green
+  'pencilColor': pencil.color.white
 };
 
 var curve_8 = {
@@ -229,7 +229,7 @@ var curve_8 = {
   },
   'lowerLimit': 0.5 * a,
   'upperLimit': 0.75 * a,
-  'pencilColor': pencil.color.red
+  'pencilColor': pencil.color.white
 };
 
 var curve_9 = {
@@ -239,7 +239,7 @@ var curve_9 = {
   },
   'lowerLimit': -0.75 * a,
   'upperLimit': -0.5 * a,
-  'pencilColor': pencil.color.red
+  'pencilColor': pencil.color.white
 };
 
 var curve_10 = {
@@ -249,7 +249,7 @@ var curve_10 = {
   },
   'lowerLimit': -0.5 * a,
   'upperLimit': 0.5 * a,
-  'pencilColor': pencil.color.purple
+  'pencilColor': pencil.color.white
 };
 
 var curve_11 = {
@@ -259,7 +259,7 @@ var curve_11 = {
   },
   'lowerLimit': a,
   'upperLimit': 3 * a,
-  'pencilColor': pencil.color.orange
+  'pencilColor': pencil.color.white
 };
 
 var curve_12 = {
@@ -269,7 +269,7 @@ var curve_12 = {
   },
   'lowerLimit': -3 * a,
   'upperLimit': -a,
-  'pencilColor': pencil.color.orange
+  'pencilColor': pencil.color.white
 };
 
 function drawBatLogo( curveArray ) {
