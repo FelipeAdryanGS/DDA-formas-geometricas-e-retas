@@ -16,7 +16,6 @@ for(var quadrados=0,altura=60,comprimento=60,localizacaox,localizacaoy; quadrado
    canvasjr.fillRect(localizacaox, localizacaoy ,altura,comprimento); 
 }
 
-//c.arc(x, y, Math.random()*20, 0, Math.PI * 2, false);
 for(var circulos=0,localizacaox,llocalizacaoy; circulos<30;circulos++){ // Desafio 1 ; 30 circulos
     localizacaox = Math.random()*canvas.width //// Desafio 2  ,posicao aleatoria
     localizacaoy = Math.random()*canvas.height////Desafio 2 , posicao aleatoria
@@ -41,7 +40,6 @@ for(var retas=0; retas<10;retas++){  //Desafio 1 ; 10 retas
 //// Estrela////
 
 canvasjr.fillStyle = gerar_cor_hexadecimal();
-localizacaox = Math.random()*canvas.width //// Desafio 2  ,posicao aleatoria
     localizacaoy = Math.random()*canvas.height
  canvasjr.beginPath();
 canvasjr.moveTo(108,0.0);
@@ -73,7 +71,12 @@ canvasjr.fillStyle = gerar_cor_hexadecimal();
       canvasjr.fill();
 
 
+      
       /////////// Batman ///////////
+
+
+
+
 
       canvasjr.transform( 1 , 0 , 0 , -1 , canvas.width * 0.5 , canvas.height * 0.5 ); // more info at https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/transform
 canvasjr.save( ); // stores canvas state - importantly it saves the direction of y-axis increasing
@@ -93,10 +96,10 @@ canvasjr.stroke( );
 
 /* draw author watermark text on canvas */
 canvasjr.scale( 1, -1 ); // makes y-axis increasing downwards so text can be written upright
-canvasjr.font = '15px Arial';
-var authorName = '@Felipe Adryan 😼';
+canvasjr.font = '20px Arial';
+var authorName = 'Felipe Adryan 😼'; 
 var authorNameMeasured = canvasjr.measureText( authorName );
-canvasjr.fillStyle = gerar_cor_hexadecimal(); // design by day white
+canvasjr.fillStyle = "White"; // design by day white
 canvasjr.textBaseline = 'bottom'; // allows to be manpulated from bottom-left
 canvasjr.fillText( authorName, ( authorNameMeasured.width * -0.5 ), ( canvas.height * 0.5 - 25 ) ); // positions author attribute
 canvasjr.restore( ); // makes y-axis increasing upwards again
